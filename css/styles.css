@@ -11,3 +11,18 @@ body{
  table{
    margin: 5%;
  }
+ .game-panel{
+   display: none;
+ }
+ #new-game-register{
+   display: none;
+   z-index: 1000;
+   background-color: #3C5D6E;
+   opacity: 0.9;
+   width: 1000px;
+   height: 100px;
+   top:150px;
+   left: 160px;
+   position: absolute;
+
+ }
