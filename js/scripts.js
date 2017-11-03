@@ -6,7 +6,7 @@ var player2 = "";
 var playFn = function(){
   return Math.floor((Math.random()*6)+1);
 }
-
+console.log(playFn);
     //create constructor for properties
  function Rounds(players){
    this.play=0;
@@ -36,16 +36,10 @@ var playFn = function(){
  };
 
 
-var player1Fn = function () {
-  var player1=number;
-  for (player1 <=1; i++) {
-    array[i]
-  }
+//user interface
+$("#btn-roll1").click(function(event){
 
-  var
-  if (player1<=1) {
-    alert("Player 2's Turn")
-  } else {
-
-  }
-}
+  player1.play = playFn();
+  alert(player1.play);
+  $("#current1").text(player1.play);
+});

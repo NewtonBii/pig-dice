@@ -9,11 +9,11 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="well">
+      <div class="container">
         <div class="jumbotron">
           <h1>Pig Dice</h1>
         </div>
-        <div class="well" style="height:300px">
+        <div class="well">
           <div class="col-sm-6" style="border-right-style:solid;">
             <h3>About Pig Dice</h3>
             <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold"</p>
@@ -25,7 +25,7 @@
             <p>The first player to score 100 or more points wins.</p>
             <button type="click" id="btn-start" style="margin-left:50%" onclick="firstPlay()">START</button>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-6" style="column-gap:10px">
           <table style="width:100%; border: 2px solid black;height:250px">
             <tr>
               <th style="text-align:center">PLAYER 1</th>
@@ -38,19 +38,18 @@
             <tr style="text-align:center">
               <td><h5>CURRENT SCORE</h5></td>
               <td><h5>CURRENT SCORE</h5></td>
-
             </tr>
             <tr style="text-align:center">
-              <td></td>
-              <td></td>
+              <td id="current"><textarea style="width:100px;height:50px"></textarea></td>
+              <td id="current2"><textarea style="width:100px;height:50px"></textarea></td>
             </tr>
             <tr style="text-align:center">
               <td><h5>TOTAL SCORE</h5></td>
               <td><h5>TOTAL SCORE</h5></td>
             </tr>
             <tr style="text-align:center">
-              <td></td>
-              <td></td>
+              <td id="total1"><textarea style="width:100px;height:50px"></textarea></td>
+              <td id="total2"><textarea style="width:100px;height:50px"></textarea></td>
             </tr>
           </table>
 

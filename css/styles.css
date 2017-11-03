@@ -8,6 +8,6 @@ body{
 .jumbotron{
   font-family: 'Russo One', sans-serif;
 }
-td{
-  align-content: center;
-}
+ table{
+   margin: 5%;
+ }
