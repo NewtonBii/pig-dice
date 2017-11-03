@@ -13,18 +13,50 @@
         <div class="jumbotron">
           <h1>Pig Dice</h1>
         </div>
-      </div>
-        <div class="well"id="introduction">
-          
-          <h3>About Pig Dice</h3>
-          <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold"</p>
-          <ul>
-            <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
-            <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
-            <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
-          </ul>
-          <button type="click" id="btn-start" onclick="myFunction()">CLICK</button>
+        <div class="well">
+          <div class="col-sm-6" style="border-right-style:solid;">
+            <h3>About Pig Dice</h3>
+            <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold"</p>
+            <ul>
+              <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+              <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+              <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+            </ul>
+            <p>The first player to score 100 or more points wins.</p>
+            <button type="click" id="btn-start" style="margin-left:50%" onclick="firstPlay()">START</button>
+          </div>
+          <div class="col-sm-6" style="column-gap:10px">
+          <table style="width:100%; border: 2px solid black;height:250px">
+            <tr>
+              <th style="text-align:center">PLAYER 1</th>
+              <th style="text-align:center">PLAYER 2</th>
+            </tr>
+            <tr style="text-align:center">
+              <td><button type="click" id="btn-roll1" style="margin-right:10px">ROLL</button><button type="click" id="btn-hold1">HOLD</button></td>
+              <td><button type="click" id="btn-roll2" style="margin-right:10px">ROLL</button><button type="click" id="btn-hold2">HOLD</button></td>
+            </tr>
+            <tr style="text-align:center">
+              <td><h5>CURRENT SCORE</h5></td>
+              <td><h5>CURRENT SCORE</h5></td>
+            </tr>
+            <tr style="text-align:center">
+              <td id="current"><textarea style="width:100px;height:50px"></textarea></td>
+              <td id="current2"><textarea style="width:100px;height:50px"></textarea></td>
+            </tr>
+            <tr style="text-align:center">
+              <td><h5>TOTAL SCORE</h5></td>
+              <td><h5>TOTAL SCORE</h5></td>
+            </tr>
+            <tr style="text-align:center">
+              <td id="total1"><textarea style="width:100px;height:50px"></textarea></td>
+              <td id="total2"><textarea style="width:100px;height:50px"></textarea></td>
+            </tr>
+          </table>
+
+          </div>
         </div>
+      </div>
+
       </div>
     </div>
 
