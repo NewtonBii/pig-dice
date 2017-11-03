@@ -5,11 +5,20 @@
     <title>PIG DICE</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Play|Russo+One|Varela+Round" rel="stylesheet">
   </head>
   <body>
-    <h1>Pig Dice</h1>
-    <p>Click to display a random number</p>
-    <button type="click" id="btn" onclick="myFunction()">CLICK</button>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="jumbotron">
+          <h1>Pig Dice</h1>
+        </div>
+        <div class="container" id="introduction">
+          <p>Click to display a random number</p>
+          <button type="click" id="btn-start" onclick="myFunction()">CLICK</button>
+        </div>
+      </div>
+    </div>
 
   </body>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
