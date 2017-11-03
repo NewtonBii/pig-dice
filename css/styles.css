@@ -3,6 +3,7 @@ body{
 }
 .container{
   background-color: #E5E7E8;
+  font-family: 'Varela Round', sans-serif;
 }
 .jumbotron{
   font-family: 'Russo One', sans-serif;
