@@ -7,6 +7,9 @@ body{
 }
 .jumbotron{
   font-family: 'Russo One', sans-serif;
+  background-image: url("../img/headerBG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
  table{
    margin: 5%;
@@ -20,7 +23,7 @@ body{
    background-color: #3C5D6E;
    opacity: 0.9;
    width: 1000px;
-   height: 100px;
+   height: 200px;
    top:150px;
    left: 160px;
    position: absolute;
