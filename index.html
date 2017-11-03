@@ -13,69 +13,65 @@
     <div class="container-fluid">
       <div class="well"id="new-game-register" style="text-align:center">
         <form id="new-game">
-          <label for="player1">PLAYER 1</label>
+          <h3 style="color:white; font-weight:bolder">CREATE YOUR PLAYERS</h3>
+          <label for="player1" style="color:white; font-weight:bolder">PLAYER 1: </label>
           <input type="text" id="player1">
-          <label for="player2">PLAYER 1</label>
+          <label for="player2" style="color:white; font-weight:bolder">PLAYER 1: </label>
           <input type="text" id="player2">
-          <button type="click" id="btn-register" style="margin-left:5%;margin-top:3%">REGISTER</button>
+          <button type="click" id="btn-register" style="margin-left:5%;margin-top:3%">PLAY</button>
         </form>
       </div>
-      <div class="container">
-        <div class="jumbotron">
-          <h1>Pig Dice</h1>
-        </div>
-        <div class="well" style="background-color:#154360">
-          <button type="click" id="btn-start" style="margin-left:65%;width:200px">START</button>
-          <div class="col-sm-6" style="border-right-style:solid;">
-            <h3>About Pig Dice</h3>
-            <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold"</p>
-            <ul>
-              <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
-              <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
-              <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
-            </ul>
-            <p>The first player to score 100 or more points wins.</p>
-
+        <div class="container">
+          <div class="jumbotron">
+            <h1>Pig Dice</h1>
           </div>
-
-          <div class="game-panel">
-            <div class="col-sm-6" style="column-gap:10px">
-            <table style="width:100%; border: 5px solid #154360;height:250px">
-              <tr>
-                <th style="text-align:center" id="player1-tag"></th>
-                <th style="text-align:center" id="player2-tag"></th>
-              </tr>
-              <tr style="text-align:center">
-                <td><button type="click" id="btn-roll1" style="margin-right:10px">ROLL</button><button type="click" id="btn-hold1">HOLD</button></td>
-                <td><button type="click" id="btn-roll2" style="margin-right:10px">ROLL</button><button type="click" id="btn-hold2">HOLD</button></td>
-              </tr>
-              <tr style="text-align:center">
-                <td><h5>CURRENT SCORE</h5></td>
-                <td><h5>CURRENT SCORE</h5></td>
-              </tr>
-              <tr style="text-align:center">
-                <td id="current"><textarea style="width:100px;height:50px"></textarea></td>
-                <td id="current2"><textarea style="width:100px;height:50px"></textarea></td>
-              </tr>
-              <tr style="text-align:center">
-                <td><h5>TOTAL SCORE</h5></td>
-                <td><h5>TOTAL SCORE</h5></td>
-              </tr>
-              <tr style="text-align:center">
-                <td id="total1"><textarea style="width:100px;height:50px"></textarea></td>
-                <td id="total2"><textarea style="width:100px;height:50px"></textarea></td>
-              </tr>
-            </table>
+          <div class="well" style="background-color:#154360">
+            <button type="click" id="btn-start" style="margin-left:65%;width:200px">LAUNCH</button>
+            <div class="col-sm-6" style="border-right-style:ridge; margin-top:20px">
+              <h3>About Pig Dice</h3>
+              <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold"</p>
+              <ul>
+                <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+                <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+                <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+              </ul>
+              <p>The first player to score 100 or more points wins.</p>
 
             </div>
+            <div class="game-panel">
+              <div class="col-sm-6" style="margin-top:20px">
+                <table style="width:100%; border: 3px inset #154360;height:250px">
+                  <tr>
+                    <th style="text-align:center" id="player1-tag"></th>
+                    <th style="text-align:center" id="player2-tag"></th>
+                  </tr>
+                  <tr style="text-align:center">
+                    <td><button type="click" id="btn-roll1" style="margin-right:10px">ROLL</button><button type="click" id="btn-hold1">HOLD</button></td>
+                    <td><button type="click" id="btn-roll2" style="margin-right:10px">ROLL</button><button type="click" id="btn-hold2">HOLD</button></td>
+                  </tr>
+                  <tr style="text-align:center">
+                    <td><h5>CURRENT SCORE</h5></td>
+                    <td><h5>CURRENT SCORE</h5></td>
+                  </tr>
+                  <tr style="text-align:center">
+                    <td id="current"><textarea style="width:100px;height:50px"></textarea></td>
+                    <td id="current2"><textarea style="width:100px;height:50px"></textarea></td>
+                  </tr>
+                  <tr style="text-align:center">
+                    <td><h5>TOTAL SCORE</h5></td>
+                    <td><h5>TOTAL SCORE</h5></td>
+                  </tr>
+                  <tr style="text-align:center">
+                    <td id="total1"><textarea style="width:100px;height:50px"></textarea></td>
+                    <td id="total2"><textarea style="width:100px;height:50px"></textarea></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
           </div>
-
         </div>
       </div>
-
-      </div>
     </div>
-
   </body>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="js/scripts.js" charset="utf-8"></script>
