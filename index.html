@@ -14,7 +14,7 @@
           <h1>Pig Dice</h1>
         </div>
         <div class="well" style="height:300px">
-          <div class="col-sm-6">
+          <div class="col-sm-6" style="border-right-style:solid;">
             <h3>About Pig Dice</h3>
             <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold"</p>
             <ul>
@@ -22,12 +22,37 @@
               <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
               <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
             </ul>
-            <button type="click" id="btn-start" style="margin-left:50%">START</button>
+            <p>The first player to score 100 or more points wins.</p>
+            <button type="click" id="btn-start" style="margin-left:50%" onclick="firstPlay()">START</button>
           </div>
           <div class="col-sm-6">
-            <button type="click" name="player1" style="margin-left:50%" onclick="player1Fn()">PLAYER 1</button>
-            <button type="click" name="player2" onclick="myFunction()">PLAYER 2</button></br>
-            <button type="click" name="hold" style="margin-left:61%">HOLD</button>
+          <table style="width:100%; border: 2px solid black;height:250px">
+            <tr>
+              <th style="text-align:center">PLAYER 1</th>
+              <th style="text-align:center">PLAYER 2</th>
+            </tr>
+            <tr style="text-align:center">
+              <td><button type="click" id="btn-roll1" style="margin-right:10px">ROLL</button><button type="click" id="btn-hold1">HOLD</button></td>
+              <td><button type="click" id="btn-roll2" style="margin-right:10px">ROLL</button><button type="click" id="btn-hold2">HOLD</button></td>
+            </tr>
+            <tr style="text-align:center">
+              <td><h5>CURRENT SCORE</h5></td>
+              <td><h5>CURRENT SCORE</h5></td>
+
+            </tr>
+            <tr style="text-align:center">
+              <td></td>
+              <td></td>
+            </tr>
+            <tr style="text-align:center">
+              <td><h5>TOTAL SCORE</h5></td>
+              <td><h5>TOTAL SCORE</h5></td>
+            </tr>
+            <tr style="text-align:center">
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
 
           </div>
         </div>
