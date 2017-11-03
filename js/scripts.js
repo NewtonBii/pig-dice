@@ -6,7 +6,7 @@ var player2 = "";
 var playFn = function(){
   return Math.floor((Math.random()*6)+1);
 }
-console.log(playFn);
+
     //create constructor for properties
  function Rounds(players){
    this.play=0;
@@ -37,9 +37,26 @@ console.log(playFn);
 
 
 //user interface
-$("#btn-roll1").click(function(event){
+$("#btn-start").click(function(event){
+  $("#player1-tag").empty();
+  $("#player2-tag").empty();
 
-  player1.play = playFn();
-  alert(player1.play);
-  $("#current1").text(player1.play);
+  $("#new-game-register").fadeIn(2000);
+});
+
+$("#btn-register").click(function(event){
+event.preventDefault();
+
+  $(".game-panel").slideDown(2000);
+  $("#new-game-register").fadeOut(2000);
+
+  var player1Name = $("#player1").val();
+  $("#player1-tag").append(player1Name);
+
+  var player2Name = $("#player2").val();
+  $("#player2-tag").append(player2Name);
+
+  player1.playerName=player1Name;
+  player2.playerName=player2Name;
+
 });
