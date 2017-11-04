@@ -2,11 +2,11 @@
 //assign two global variables to player1 and player2.
 var player1="";
 var player2="";
-
-//create a rollDice function that returns a random value between 1 and 6
-var rollDice = function(roll){
+// create a rollDice function
+var rollDice = function(){
   return Math.floor(Math.random()*6)+1;
-}
+};
+
 
 // create a constructor
 
@@ -15,7 +15,7 @@ function Player(turn){
   this.temporaryScore=0;
   this.totalRoundScore=0;
   this.turn=turn;
-  this,playerName;
+  this.playerName;
 }
 
 //add a method that will check that everytime a rollDice event is created, it adds to the total Round score unless 1 is picked whereby it changes turn and current player scores 0.
@@ -23,11 +23,28 @@ function Player(turn){
 Player.prototype.rollcheck = function () {
   if (this.roll==1) {
     this.temporaryScore=0;
+    console.log("Rolled One. Next player");
   } else {
     this.temporaryScore+=this.roll;
+    console.log("Nice! Roll Again or HOLD");
   }
 };
 
+//Check for winning condition
+
+Player.prototype.checkWinner = function () {
+  if (this.totalRoundScore >=100) {
+    console.log("Winner");
+  }
+};
+
+//create a hold method
+
+Player.prototype.hold = function () {
+  this.totalRoundScore+=this.temporaryScore;
+  this.temporaryScore=0;
+  console.log("Okay. Next Player Turn");
+};
 //user interface
 
 //button to launch game
@@ -55,4 +72,26 @@ event.preventDefault();
   player1.playerName=player1Name;
   player2.playerName=player2Name;
 
+});
+
+//click #btn-roll1 to play for player1 and display at #current1
+$("#btn-roll1").click(function(event){
+  player1.roll = rollDice();
+  $("td#current1").text("how");
+});
+//click #btn-roll2 to play for player2 and display at #current2
+$("#btn-roll2").click(function(event){
+  player1.roll = rollDice();
+  $("td#current2").text("how");
+});
+//click #btn-hold1 to hold for player1 and display at #total1
+$("#btn-hold1").click(function(event){
+  player1.roll = rollDice();
+  $("#total1").text("total");
+
+});
+//click #btn-hold2 to hold for player2 and display at #total2
+$("#btn-hold2").click(function(event){
+  player1.roll = rollDice();
+  $("#total2").text("total");
 });
