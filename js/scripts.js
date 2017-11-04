@@ -1,42 +1,36 @@
 //business logic
+//assign two global variables to player1 and player2.
+var player1="";
+var player2="";
 
-var player1 = "";
-var player2 = "";
-
-var playFn = function(){
-  return Math.floor((Math.random()*6)+1);
+//create a rollDice function that returns a random value between 1 and 6
+var rollDice = function(roll){
+  return Math.floor(Math.random()*6)+1;
 }
 
-    //create constructor for properties
- function Rounds(players){
-   this.play=0;
-   this.rolledScore=0;
-   this.totalScore=0;
-   this.players=players;
- }
+// create a constructor
 
- //create function for firstplay
- Rounds.prototype.firstPlay = function(){
-   if (this.play==1) {
-     this.rolledScore=0;
-     alert("You rolled 1. Next player's turn");
-   }else {
-     this.rolledScore += this.play;
-   }
- };
+function Player(turn){
+  this.roll=0;
+  this.temporaryScore=0;
+  this.totalRoundScore=0;
+  this.turn=turn;
+  this,playerName;
+}
 
- //function for holding.
+//add a method that will check that everytime a rollDice event is created, it adds to the total Round score unless 1 is picked whereby it changes turn and current player scores 0.
 
- Rounds.prototype.hold = function () {
-
-   this.totalScore += this.rolledScore;
-   this.rolledScore = 0;
-   alert("HOLD. Next Player's Turn");
-
- };
-
+Player.prototype.rollcheck = function () {
+  if (this.roll==1) {
+    this.temporaryScore=0;
+  } else {
+    this.temporaryScore+=this.roll;
+  }
+};
 
 //user interface
+
+//button to launch game
 $("#btn-start").click(function(event){
   $("#player1-tag").empty();
   $("#player2-tag").empty();
@@ -45,7 +39,7 @@ $("#btn-start").click(function(event){
 
   $("#new-game-register").fadeIn(500);
 });
-
+//click to register players and start game.
 $("#btn-register").click(function(event){
 event.preventDefault();
 
