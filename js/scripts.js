@@ -44,6 +44,7 @@ event.preventDefault();
   var player1 = new Player (player1Name,0,0)
   var player2 = new Player (player2Name,0,0)
 
+
   $(".player1-name").text(player1.playerName);
   $(".player1-total-score").html("<span class='player1-total-score'>" + player1.totalScore + "</span>");
 
@@ -51,7 +52,9 @@ event.preventDefault();
     event.preventDefault();
     var player1RolledNumber = player1.roll();
     if (player1RolledNumber === 1) {
-      $(".player1-scored1").show();
+      $(".player1-scored1").show(500).fadeOut(1000);
+      $("#well-play1").fadeOut(900);
+      $("#well-play2").show(900);
     }
     $(".player1-rolled-number").text(player1RolledNumber);
     $(".player1-turn-score").text(player1.turnScore);
@@ -65,12 +68,15 @@ event.preventDefault();
     $(".player1-turn-score").text(player1.turnScore);
     if (player1.totalScore >= 100) {
       $("#game-section").fadeOut(400);
-      $(".player1-victory").show();
+      $(".player1-victory").show().fadeOut(1200);
     } else {
 
     $(".player2").show();
     $(".player2-scored1").hide();
+    $("#well-play2").show(900);
+    $(".hold").show().fadeOut(1500);
     }
+
   });
 
   $(".player2-name").text(player2.playerName);
@@ -80,8 +86,9 @@ event.preventDefault();
     event.preventDefault();
     var player2RolledNumber = player2.roll();
     if (player2RolledNumber === 1) {
-      $(".player2-scored1").show();
-      $(".player1-scored1").hide();
+      $(".player2-scored1").show().fadeOut(1000);
+      $("#well-play2").fadeOut(1000);
+      $("#well-play1").show(900);
     }
     $(".player2-rolled-number").text(player2RolledNumber);
     $(".player2-turn-score").text(player2.turnScore);
@@ -95,9 +102,12 @@ event.preventDefault();
     $(".player2-turn-score").text("");
     if (player2.totalScore >= 100) {
       $("#game-section").fadeOut(400);
-      $(".player2-victory").show();
+      $(".player2-victory").show().fadeOut(1200);
     } else {
-    $(".player1-scored1").hide();
+    $(".player1-scored1").hide
+    $("#well-play1").show(900);
+    $(".hold").show().fadeOut(1500);
+
     }
   });
 

@@ -32,3 +32,54 @@ background-color: #CFB5CF;
 h5{
   display: none;
 }
+h2{
+  text-align: center;
+  color: white;
+}
+.player1-scored1{
+  display: none;
+  background-color: #412641;
+  z-index: 500;
+  height: 200px;
+  position: absolute;
+  top: 30%;
+  opacity: 0.8;
+}
+.player2-scored1{
+  display: none;
+  background-color: #412641;
+  z-index: 500;
+  height: 200px;
+  position: absolute;
+  top: 30%;
+  opacity: 0.8;
+}
+.hold{
+  display: none;
+  background-color: #C4D867;
+  z-index: 400;
+  height: 200px;
+  width: 250px;
+  position: absolute;
+  opacity: 0.5;
+  padding: 20%;
+}
+.player1-victory{
+  z-index: 600;
+  height: 300px;
+  width: 500px;
+  background-color: #C4D867;
+  position: absolute;
+  padding: 20%;
+  top:50%;
+  display: none;
+}
+.player2-victory{
+  z-index: 300;
+  height: 300px;
+  width: 500px;
+  background-color: #C4D867;
+  position: absolute;
+  padding: 20%;
+  display: none;
+}
