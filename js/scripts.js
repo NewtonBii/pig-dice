@@ -71,9 +71,9 @@ event.preventDefault();
       $(".player1-victory").show().fadeOut(1200);
     } else {
 
-    $(".player2").show();
     $(".player2-scored1").hide();
     $("#well-play2").show(900);
+    $("#well-play1").hide(900);
     $(".hold").show().fadeOut(1500);
     }
 
@@ -104,9 +104,9 @@ event.preventDefault();
       $("#game-section").fadeOut(400);
       $(".player2-victory").show().fadeOut(1200);
     } else {
-    $(".player1-scored1").hide
     $("#well-play1").show(900);
     $(".hold").show().fadeOut(1500);
+    $("#well-play2").hide(900);
 
     }
   });
