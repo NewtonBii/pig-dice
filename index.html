@@ -26,7 +26,7 @@
             <h1>Pig Dice</h1>
           </div>
           <div class="well" style="background-color:#154360">
-            <button type="click" id="btn-start" style="margin-left:65%;width:200px">LAUNCH</button>
+            <button type="click" id="btn-start" style="margin-left:65%;width:200px" class="button">LAUNCH</button>
             <div class="col-sm-6" style="border-right-style:ridge; margin-top:20px">
               <h3>About Pig Dice</h3>
               <p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold"</p>
@@ -38,36 +38,46 @@
               <p>The first player to score 100 or more points wins.</p>
 
             </div>
-            <div class="game-panel">
-              <div class="col-sm-6" style="margin-top:20px">
-                <table style="width:100%; border: 3px inset #154360;height:250px">
-                  <tr>
-                    <th style="text-align:center" id="player1-tag"></th>
-                    <th style="text-align:center" id="player2-tag"></th>
-                  </tr>
-                  <tr style="text-align:center">
-                    <td><button type="click" id="btn-roll1" style="margin-right:10px">ROLL</button><button type="click" id="btn-hold1">HOLD</button></td>
-                    <td><button type="click" id="btn-roll2" style="margin-right:10px">ROLL</button><button type="click" id="btn-hold2">HOLD</button></td>
-                  </tr>
-                  <tr style="text-align:center">
-                    <td><h5>CURRENT SCORE</h5></td>
-                    <td><h5>CURRENT SCORE</h5></td>
-                  </tr>
-                  <tr style="text-align:center">
-                    <td id="current1"><textarea style="width:100px;height:50px"></textarea></td>
-                    <td id="current2"><textarea style="width:100px;height:50px"></textarea></td>
-                  </tr>
-                  <tr style="text-align:center">
-                    <td><h5>TOTAL SCORE</h5></td>
-                    <td><h5>TOTAL SCORE</h5></td>
-                  </tr>
-                  <tr style="text-align:center">
-                    <td><textarea style="width:100px;height:50px" id="total1"></textarea></td>
-                    <td><textarea style="width:100px;height:50px" id="total2"></textarea></td>
-                  </tr>
-                </table>
-              </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="well" style="width:100%;background-color:#154360; margin-top:-3%; margin-left:2.5%; display:none" id="well-play">
+              <div class="buttons" style="margin-left:40%"><button type="click" id="btn-roll" style="margin-right:10px" class="button">ROLL</button><button type="click" id="btn-hold" class="button">HOLD</button></div>
             </div>
+            <div class="col-sm-6">
+              <div class="player-name" id="name-0" style="display:none;margin-top:-8%"></div>
+              <div class="game-panel1" style="display:none">
+                  <div class="player-0-panel active-0">
+                    <div class="game-panel">
+
+                      <div class="player-score-0" id="score-0">0</div>
+                      <div class="player-0-rolled-1"><h3>Sorry! You rolled 1.</h3></div>
+                        <div class="player-current-box-0">
+                          <div class="player-current-label">Current</div>
+                          <div class="player-current-score" id="current-0">0</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="player-name" id="name-1" style="display:none;margin-top:-8%"></div>
+                <div class="player-1-panel">
+                  <div class="game-panel2" style="display:none">
+                    <div class="player-score-1" id="score-1">0</div>
+                    <div class="player-1-rolled-1"><h3>Oops! You rolled 1.</h3></div>
+                    <div class="player-current-box-1">
+                      <div class="player-current-label">Current</div>
+                      <div class="player-current-score" id="current-1">0</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
           </div>
         </div>
       </div>
